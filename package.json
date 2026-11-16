@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -k \"tsx watch server/index.ts\" \"vite --host 0.0.0.0\"",
-    "build": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json && vite build",
+    "build": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json && vite build && node scripts/inline-build.mjs",
     "start": "cross-env NODE_ENV=production tsx server/index.ts"
   },
   "dependencies": {
